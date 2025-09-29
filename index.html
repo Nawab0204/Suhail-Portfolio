@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Suhail Asghar | International Recruitment &amp; Student Engagement</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#14B8A6", // Vibrant Teal
+                        secondary: "#F97316", // Bright Orange
+                        "background-light": "#F0F9FF", // Light Sky Blue
+                        "background-dark": "#FFFFFF", // White (for light mode)
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#F0F9FF", // Light Sky Blue for cards in light mode
+                        "text-light": "#0C4A6E", // Dark Blue
+                        "text-dark": "#0C4A6E", // Dark Blue for text in light mode
+                        "subtext-light": "#38BDF8", // Sky Blue
+                        "subtext-dark": "#38BDF8", // Sky Blue for subtext in light mode
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(240, 249, 255, 0.8), rgba(240, 249, 255, 0.8)), url('https://images.pexels.com/photos/33728147/pexels-photo-33728147.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #14B8A6;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #14B8A6;
+            border: 2px solid #F0F9FF;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="font-body bg-background-light text-text-light" x-data="{ mobileMenuOpen: false }">
+    <header class="bg-background-light/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a class="text-3xl font-display text-primary" href="#home">Suhail Asghar</a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a class="text-text-light hover:text-primary transition" href="#home">Home</a>
+                <a class="text-text-light hover:text-primary transition" href="#about">About</a>
+                <a class="text-text-light hover:text-primary transition" href="#experience">Experience</a>
+                <a class="text-text-light hover:text-primary transition" href="#certifications">Certifications</a>
+                <a class="text-text-light hover:text-primary transition" href="#posts">Posts</a>
+                <a class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-opacity-90 transition shadow" href="#contact">Contact
+                    Me</a>
+            </div>
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-text-light focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+        <div @click.away="mobileMenuOpen = false" class="md:hidden" x-cloak="" x-show="mobileMenuOpen">
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#home">Home</a>
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#about">About</a>
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#experience">Experience</a>
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#certifications">Certifications</a>
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#posts">Posts</a>
+            <a @click="mobileMenuOpen = false" class="block py-2 px-6 text-sm text-text-light hover:bg-gray-200" href="#contact">Contact Me</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero-bg text-text-light min-h-[90vh] flex items-center" id="home">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <img alt="Suhail Asghar" class="w-56 h-56 object-cover rounded-full mx-auto mb-8 border-4 border-primary shadow-lg" src="https://media.licdn.com/dms/image/v2/D4D03AQGvAC93GOHJHA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1679792424568?e=1761782400&v=beta&t=MS69EDM2Oivjupg5UnC9nu6yzQYBB8GzMUjhfFcZwn8" />
+                    <h1 class="text-5xl md:text-7xl font-display text-primary mb-4">Suhail Asghar</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-text-light max-w-2xl mx-auto">International Recruitment &amp;
+                        Student Engagement | MBA | Events &amp; Student Affairs</p>
+                    <div class="space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a class="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-opacity-90 transition inline-block shadow-md" href="#experience">View My Work</a>
+                        <a class="bg-secondary text-white px-8 py-3 rounded-lg text-lg hover:bg-opacity-90 transition inline-block shadow-md" download="Suhail_Asghar_CV.pdf" href="https://raw.githubusercontent.com/ai-devex/gemini-codelabs-innovate/main/hackathon/Profile.pdf">Download
+                            CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-background-light" id="metrics">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <h3 class="text-5xl font-bold text-primary">7+</h3>
+                        <p class="text-subtext-light mt-2">Years in Student Affairs</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-5xl font-bold text-primary">50+</h3>
+                        <p class="text-subtext-light mt-2">Events Organized</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-5xl font-bold text-primary">10+</h3>
+                        <p class="text-subtext-light mt-2">Countries for Recruitment</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-5xl font-bold text-primary">MBA</h3>
+                        <p class="text-subtext-light mt-2">in Project Management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-card-light" id="about">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-text-light">About Me</h2>
+                    <p class="text-subtext-light mt-3 text-lg">Driven professional passionate about student success and
+                        global education.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    <div class="lg:w-2/3">
+                        <h3 class="text-3xl font-display text-primary mb-4">A dedicated and achievement-driven
+                            professional...</h3>
+                        <p class="mb-4 leading-relaxed text-lg text-text-light"> with an MBA in Project Management and
+                            more than seven years in student affairs, I specialise in international student recruitment,
+                            campus events, and student welfare. At Abu Dhabi University I have led recruitment strategies
+                            across GCC, MENA and South Asia, built partnerships with agents and schools, and organized
+                            large-scale conferences and student programs that increased engagement and satisfaction.</p>
+                        <p class="leading-relaxed text-lg text-text-light">My work combines CRM &amp; Salesforce-driven
+                            lead management with on-the-ground event delivery — from planning and committees to logistics
+                            and post-event analysis. I'm passionate about mentoring students and creating inclusive campus
+                            experiences.</p>
+                    </div>
+                    <div class="lg:w-1/3 w-full bg-background-light p-8 rounded-xl shadow-lg">
+                        <h4 class="text-2xl font-display text-primary mb-6">Core Skills</h4>
+                        <ul class="space-y-4 text-text-light">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-3"></i>International
+                                Recruitment
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-3"></i>Event
+                                Management
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-3"></i>Student
+                                Leadership &amp; Mentoring
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-3"></i>Project
+                                Management (MBA)
+                            </li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-3"></i>CRM &amp;
+                                Salesforce
+                            </li>
+                        </ul>
+                        <h4 class="text-2xl font-display text-primary mt-8 mb-6">Languages</h4>
+                        <ul class="space-y-4 text-text-light">
+                            <li class="flex items-center"><i class="fas fa-globe text-primary mr-3"></i>English, Urdu,
+                                Arabic
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-background-light" id="experience">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-text-light">Professional Experience</h2>
+                    <p class="text-subtext-light mt-3 text-lg">A timeline of my career journey.</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-12">
+                        <div class="timeline-item">
+                            <h3 class="text-2xl font-bold text-text-light">International Student Recruitment Officer</h3>
+                            <p class="font-semibold text-primary text-lg">Abu Dhabi University | Sep 2024 – Present</p>
+                            <ul class="list-disc list-inside mt-3 text-subtext-light space-y-2">
+                                <li>Lead international recruitment strategies across GCC, MENA, Africa and South Asia.</li>
+                                <li>Manage CRM/Salesforce pipelines and represent ADU at global education fairs.</li>
+                                <li>Establish partnerships with agents, schools, and scholarship bodies.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-2xl font-bold text-text-light">Activities and Events Officer</h3>
+                            <p class="font-semibold text-primary text-lg">Abu Dhabi University | Jan 2023 – Jul 2025</p>
+                            <ul class="list-disc list-inside mt-3 text-subtext-light space-y-2">
+                                <li>Organized academic events, workshops, and conferences.</li>
+                                <li>Developed and delivered lectures for the GAP program.</li>
+                                <li>Mentored students in the Mubadala Masary Program.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-2xl font-bold text-text-light">Student Affairs Coordinator</h3>
+                            <p class="font-semibold text-primary text-lg">Abu Dhabi University | Aug 2019 – Jul 2025</p>
+                            <ul class="list-disc list-inside mt-3 text-subtext-light space-y-2">
+                                <li>Managed ADU sports teams, coaching, and equipment.</li>
+                                <li>Organized recreational and educational trips.</li>
+                                <li>Supervised international student services (visas, housing, etc.).</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="text-2xl font-bold text-text-light">Academic Advisor, Accountant &amp; Event
+                                Organizer</h3>
+                            <p class="font-semibold text-primary text-lg">Previous Roles | Jan 2014 – Aug 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-card-light" id="certifications">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-text-light">Certifications &amp; Training</h2>
+                    <p class="text-subtext-light mt-3 text-lg">Committed to continuous learning and professional
+                        development.</p>
+                </div>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fas fa-first-aid fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">First Aid and CPR Training</h4>
+                            <p class="text-subtext-light">Liwa University | May 2023</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fas fa-shield-alt fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">Student Safeguarding Training</h4>
+                            <p class="text-subtext-light">Knowledge Group Consulting | May 2023</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fab fa-linkedin fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">Strategic Thinking</h4>
+                            <p class="text-subtext-light">LinkedIn | Jun 2022</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fas fa-fire-extinguisher fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">Basic Fire Safety Training</h4>
+                            <p class="text-subtext-light">Liwa University | Jun 2021</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fab fa-linkedin fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">Conflict Resolution Foundations</h4>
+                            <p class="text-subtext-light">LinkedIn | May 2021</p>
+                        </div>
+                    </div>
+                    <div class="bg-background-light p-6 rounded-xl shadow-lg flex items-start transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="mr-5 pt-1"><i class="fab fa-linkedin fa-2x text-primary"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-text-light">Leadership Foundations</h4>
+                            <p class="text-subtext-light">LinkedIn | Apr 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-24 bg-background-light" id="posts">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-display font-bold text-text-light">Recent Posts &amp; Activity</h2>
+                    <p class="text-subtext-light mt-3 text-lg">Highlights from my LinkedIn profile.</p>
+                </div>
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-card-light rounded-lg shadow-lg overflow-hidden">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7201953770010734592" height="560" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
+                    <div class="bg-card-light rounded-lg shadow-lg overflow-hidden">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7192799200567312384" height="560" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
+                    <div class="bg-card-light rounded-lg shadow-lg overflow-hidden">
+                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7067166456655818752" height="560" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-card-light" id="contact">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-display font-bold text-text-light">Get In Touch</h2>
+                    <p class="text-subtext-light mt-3 text-lg">Let's connect and discuss how I can contribute to your team
+                        or event.</p>
+                </div>
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 bg-background-light p-8 rounded-xl shadow-lg">
+                    <div class="md:w-1/2">
+                        <form action="mailto:suhail.asghar2222@gmail.com" enctype="text/plain" method="post">
+                            <div class="mb-5">
+                                <label class="block text-text-light font-medium mb-2" for="name">Name</label>
+                                <input class="w-full px-4 py-2 bg-card-light border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-text-light" id="name" name="name" required="" type="text" />
+                            </div>
+                            <div class="mb-5">
+                                <label class="block text-text-light font-medium mb-2" for="email">Email</label>
+                                <input class="w-full px-4 py-2 bg-card-light border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-text-light" id="email" name="email" required="" type="email" />
+                            </div>
+                            <div class="mb-5">
+                                <label class="block text-text-light font-medium mb-2" for="message">Message</label>
+                                <textarea class="w-full px-4 py-2 bg-card-light border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-text-light" id="message" name="message" required="" rows="5"></textarea>
+                            </div>
+                            <button class="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition font-bold shadow" type="submit">Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-3xl font-display text-primary mb-6">Contact Information</h3>
+                        <div class="space-y-5 text-text-light text-lg">
+                            <p class="flex items-center"><i class="fas fa-envelope text-primary mr-4"></i>
+                                suhail.asghar2222@gmail.com</p>
+                            <p class="flex items-center"><i class="fas fa-phone text-primary mr-4"></i> +971 55 294 8321</p>
+                            <p class="flex items-center"><i class="fas fa-map-marker-alt text-primary mr-4"></i> Al-Ain,
+                                United Arab Emirates</p>
+                            <div class="mt-8 flex space-x-6">
+                                <a class="text-subtext-light hover:text-primary text-3xl transition" href="https://www.linkedin.com/in/suhail-asghar-b011a1b8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-background-light text-subtext-light py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Suhail Asghar. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</body>
+
+</html>
